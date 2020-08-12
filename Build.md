@@ -80,7 +80,7 @@ brew install elastic/tap/kibana-full
 ```
 
 
-## 1.2 kibana 실행중 에러 발생
+## 1.2 kibana 실행 중 에러 발생
 - 어느 블로그에서 본대로 설치 했지만 왜인지 모르게 오류 발생
 ```
 [fatal][root] { Error: [mapper_parsing_exception] No handler for type [flattened] declared on field [state]
@@ -89,7 +89,7 @@ brew install elastic/tap/kibana-full
 - http://localhost:9200 에 나오는 Elasticsearch의 설정을 보면, "build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
 
 
-__ 해결방법 __
+__해결방법__
 - kibana-full 을 삭제하고 그냥 kibana를 설치
 ```
 brew list
