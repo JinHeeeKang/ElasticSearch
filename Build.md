@@ -17,8 +17,8 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
 ```
 
 ## 2. Elastic Search 설치
-- https://www.elastic.co/kr/downloads/elasticsearch 에서도 가능하지만
-- 터미널로 설치하기 위해 Brew 패키지 관리자 설치 후 Elasticsearch을 설치함
+- https://www.elastic.co/kr/downloads/elasticsearch 에서도 가능
+- Brew 패키지 관리자 설치 후 Elasticsearch을 설치함
 
 ### 2.1 Brew 패키지 관리자 설치
 - 터미널에 붙여넣기 
@@ -30,7 +30,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
 brew install elasticsearch
 ```
 
-### 3. elasticsearch 실행
+## 3. elasticsearch 실행
 - 실행
 ```
 elasticsearch
@@ -70,4 +70,14 @@ brew tap elastic/tap
 ```
 brew install elastic/tap/kibana-full
 ```
-
+## 3. kibana 실행
+- 엘라스틱서치 실행 후, 다른 터미널을 열어 키바나 실행 
+- Homebrew package 로 설치 했기 때문에 아래 코드로 start, stop
+```
+brew services start elastic/tap/kibana-full
+brew services stop elastic/tap/kibana-full
+```
+- kibana 인터페이스
+```
+http://localhost:5601
+```
