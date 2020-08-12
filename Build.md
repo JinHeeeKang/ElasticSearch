@@ -9,3 +9,8 @@
  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  
  출처: https://blog.acu.pe.kr/56 [아쿠 :: 컴공의 기록]
 
+- java -version 로 설치 됐는지 확인
+
+ java version "1.8.0_171"
+ Java(TM) SE Runtime Environment (build 1.8.0_171-b11)
+ Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
