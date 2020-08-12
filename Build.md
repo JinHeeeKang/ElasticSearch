@@ -1,4 +1,4 @@
-# mac 에서 Elastic Search 환경 구축
+# mac 에서 Elastic Search, Kibana, Logstash 환경 구축
 - 맥에서 환경 구축하는 건 처음이라 구글링하며 설치 해보았습니다.
 
 ## 1. JAVA 설치
