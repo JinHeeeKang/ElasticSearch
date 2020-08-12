@@ -20,11 +20,13 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
 - https://www.elastic.co/kr/downloads/elasticsearch 에서도 가능
 - Brew 패키지 관리자 설치 후 Elasticsearch을 설치함
 
+
 ### 2.1 Brew 패키지 관리자 설치
 - 터미널에 붙여넣기 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
+
 ### 2.2 elasticsearch 설치
 ```
 brew install elasticsearch
@@ -59,13 +61,16 @@ http://localhost:9200/
   "tagline" : "You Know, for Search"
 }
 ```
+
 -------
+
 # Kibana 설치
 - 참조 https://www.elastic.co/guide/en/kibana/current/brew.html 
 - 아래 방식으로 설치 후 에러 발생했기때문에 에러부분(Kibana 3.1) 확인 후 설치 권장 
 
-## elasticsearch을 elasticsearch-full 을 설치했다면 kibana도 kibana-full,
-elasticsearch을 설치했다면 kibana도 kibana
+
+__(중요) elasticsearch을 elasticsearch-full 을 설치했다면 kibana도 kibana-full, elasticsearch을 설치했다면 kibana도 kibana__
+
 
 ## 1.1 Elastic Homebrew repository로 이동 후 kibana 설치
 
@@ -73,6 +78,8 @@ elasticsearch을 설치했다면 kibana도 kibana
 brew tap elastic/tap
 brew install elastic/tap/kibana-full
 ```
+
+
 ## 1.2 kibana 실행중 에러 발생
 - 어느 블로그에서 본대로 설치 했지만 왜인지 모르게 오류 발생
 ```
@@ -81,7 +88,8 @@ brew install elastic/tap/kibana-full
 - Elasticsearch 와 동일한 버전이 아니라서 발생한 듯
 - http://localhost:9200 에 나오는 Elasticsearch의 설정을 보면, "build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
 
-### 해결방법 
+
+__ 해결방법 __
 - kibana-full 을 삭제하고 그냥 kibana를 설치
 ```
 brew list
