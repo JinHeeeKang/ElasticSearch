@@ -61,3 +61,13 @@ http://localhost:9200/
 ```
 -------
 # Kibana 설치
+- 참조 https://www.elastic.co/guide/en/kibana/current/brew.html 
+## 1. Elastic Homebrew repository로 이동
+```
+brew tap elastic/tap
+```
+## 2. kibana 설치
+```
+brew install elastic/tap/kibana-full
+```
+
