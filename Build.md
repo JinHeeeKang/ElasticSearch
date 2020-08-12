@@ -62,7 +62,7 @@ http://localhost:9200/
 -------
 # Kibana 설치
 - 참조 https://www.elastic.co/guide/en/kibana/current/brew.html 
-- 아래 방식으로 설치 후 에러 발생했기때문에 에러부분 확인 후 설치 권장 3.1 
+- 아래 방식으로 설치 후 에러 발생했기때문에 에러부분(Kibana 3.1) 확인 후 설치 권장 
 ## 1. Elastic Homebrew repository로 이동
 ```
 brew tap elastic/tap
