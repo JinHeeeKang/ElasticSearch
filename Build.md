@@ -63,23 +63,22 @@ http://localhost:9200/
 # Kibana 설치
 - 참조 https://www.elastic.co/guide/en/kibana/current/brew.html 
 - 아래 방식으로 설치 후 에러 발생했기때문에 에러부분(Kibana 3.1) 확인 후 설치 권장 
-## elasticsearch을 elasticsearch-full 을 설치했다면 kibana도 kibana-full,
-                  elasticsearch을 설치했다면 kibana도 kibana
 
-## 1.1 Elastic Homebrew repository로 이동
+## elasticsearch을 elasticsearch-full 을 설치했다면 kibana도 kibana-full,
+elasticsearch을 설치했다면 kibana도 kibana
+
+## 1.1 Elastic Homebrew repository로 이동 후 kibana 설치
+
 ```
 brew tap elastic/tap
-```
-## 1.2 kibana 설치
-```
 brew install elastic/tap/kibana-full
 ```
-## 1.3 kibana 실행중 에러 발생
+## 1.2 kibana 실행중 에러 발생
 - 어느 블로그에서 본대로 설치 했지만 왜인지 모르게 오류 발생
-- Elasticsearch 와 동일한 버전이 아니라서 발생한 듯
 ```
 [fatal][root] { Error: [mapper_parsing_exception] No handler for type [flattened] declared on field [state]
 ```
+- Elasticsearch 와 동일한 버전이 아니라서 발생한 듯
 - http://localhost:9200 에 나오는 Elasticsearch의 설정을 보면, "build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
 
 ### 해결방법 
