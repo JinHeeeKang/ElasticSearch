@@ -90,7 +90,7 @@ brew install elastic/tap/kibana-full
 - http://localhost:9200 에 나오는 Elasticsearch의 설정을 보면, "build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
 
 
-- __해결방법__
+### 해결 방법
 - kibana-full 을 삭제하고 그냥 kibana를 설치
 ```
 brew list
