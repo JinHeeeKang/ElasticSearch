@@ -69,7 +69,8 @@ http://localhost:9200/
 - 아래 방식으로 설치 후 에러 발생했기때문에 에러부분(Kibana 3.1) 확인 후 설치 권장 
 
 
-__(중요) elasticsearch을 elasticsearch-full 을 설치했다면 kibana도 kibana-full, elasticsearch을 설치했다면 kibana도 kibana__
+__(중요) elasticsearch를 elasticsearch-full 설치했다면 kibana도 kibana-full, 
+elasticsearch를 설치했다면 kibana도 kibana__
 
 
 ## 1.1 Elastic Homebrew repository로 이동 후 kibana 설치
@@ -89,7 +90,7 @@ brew install elastic/tap/kibana-full
 - http://localhost:9200 에 나오는 Elasticsearch의 설정을 보면, "build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
 
 
-__해결방법__
+- __해결방법__
 - kibana-full 을 삭제하고 그냥 kibana를 설치
 ```
 brew list
