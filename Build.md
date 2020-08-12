@@ -81,3 +81,6 @@ brew services stop elastic/tap/kibana-full
 ```
 http://localhost:5601
 ```
+
+-------
+# Logstash 설치
