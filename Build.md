@@ -63,18 +63,36 @@ http://localhost:9200/
 # Kibana 설치
 - 참조 https://www.elastic.co/guide/en/kibana/current/brew.html 
 - 아래 방식으로 설치 후 에러 발생했기때문에 에러부분(Kibana 3.1) 확인 후 설치 권장 
-## 1. Elastic Homebrew repository로 이동
+## elasticsearch을 elasticsearch-full 을 설치했다면 kibana도 kibana-full,
+                  elasticsearch을 설치했다면 kibana도 kibana
+
+## 1.1 Elastic Homebrew repository로 이동
 ```
 brew tap elastic/tap
 ```
-## 2. kibana 설치
+## 1.2 kibana 설치
 ```
-brew install elastic/tap/kibana
+brew install elastic/tap/kibana-full
 ```
-## 3. kibana 실행
-- 엘라스틱서치 실행 후, 다른 터미널을 열어 키바나 실행 
-- Homebrew 로 설치 했기 때문에 아래 코드로 실행
+## 1.3 kibana 실행중 에러 발생
+- 어느 블로그에서 본대로 설치 했지만 왜인지 모르게 오류 발생
+- Elasticsearch 와 동일한 버전이 아니라서 발생한 듯
+```
+[fatal][root] { Error: [mapper_parsing_exception] No handler for type [flattened] declared on field [state]
+```
+- http://localhost:9200 에 나오는 Elasticsearch의 설정을 보면, "build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
 
+### 해결방법 
+- kibana-full 을 삭제하고 그냥 kibana를 설치
+```
+brew list
+brew remove kibana-full
+brew install kibana
+```
+
+## 3 kibana 실행
+- 엘라스틱서치 실행 후, 다른 터미널을 열어 키바나 실행 
+- 터미널에서 아래 코드로 실행
 ```
 kibana
 ```
@@ -82,15 +100,6 @@ kibana
 ```
 http://localhost:5601
 ```
-## 3.1 kibana 실행중 에러 발생
-
-- Elasticsearch 와 동일한 버전이 아니라서 발생한 듯
-```
-[fatal][root] { Error: [mapper_parsing_exception] No handler for type [flattened] declared on field [state]
-```
-- 위 3을 확인 하면 나오는 Elasticsearch의 설정을 보면,
-"build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
- 
 
 -------
 # Logstash 설치
