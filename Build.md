@@ -39,3 +39,23 @@ elasticsearch
 ```
 http://localhost:9200/
 ```
+- 이런 화면이 출력되면 성공
+```
+{
+  "name" : "gangjinhuiui-MacBook-Pro.local",
+  "cluster_name" : "elasticsearch_brew",
+  "cluster_uuid" : "S391dADYSqqRa7WRGmiybA",
+  "version" : {
+    "number" : "7.8.1-SNAPSHOT",
+    "build_flavor" : "oss",
+    "build_type" : "tar",
+    "build_hash" : "unknown",
+    "build_date" : "2020-07-31T16:47:49.963461Z",
+    "build_snapshot" : true,
+    "lucene_version" : "8.5.1",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
