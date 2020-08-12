@@ -39,25 +39,42 @@ elasticsearch
 ```
 http://localhost:9200/
 ```
+- 이런 화면이 나오면 성공
+```
+{
+  "name" : "gangjinhuiui-MacBook-Pro.local",
+  "cluster_name" : "elasticsearch_brew",
+  "cluster_uuid" : "S391dADYSqqRa7WRGmiybA",
+  "version" : {
+    "number" : "7.8.1-SNAPSHOT",
+    "build_flavor" : "oss",
+    "build_type" : "tar",
+    "build_hash" : "unknown",
+    "build_date" : "2020-07-31T16:47:49.963461Z",
+    "build_snapshot" : true,
+    "lucene_version" : "8.5.1",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
 -------
 # Kibana 설치
 - 참조 https://www.elastic.co/guide/en/kibana/current/brew.html 
+- 아래 방식으로 설치 후 에러 발생했기때문에 에러부분 확인 후 설치 권장 3.1 
 ## 1. Elastic Homebrew repository로 이동
 ```
 brew tap elastic/tap
 ```
 ## 2. kibana 설치
 ```
-brew install elastic/tap/kibana-full
+brew install elastic/tap/kibana
 ```
 ## 3. kibana 실행
 - 엘라스틱서치 실행 후, 다른 터미널을 열어 키바나 실행 
-- Homebrew package 로 설치 했기 때문에 아래 코드로 start, stop
-```
-brew services start elastic/tap/kibana-full
-brew services stop elastic/tap/kibana-full
-```
-- 또는
+- Homebrew 로 설치 했기 때문에 아래 코드로 실행
+
 ```
 kibana
 ```
@@ -65,6 +82,15 @@ kibana
 ```
 http://localhost:5601
 ```
+## 3.1 kibana 실행중 에러 발생
+
+- Elasticsearch 와 동일한 버전이 아니라서 발생한 듯
+```
+[fatal][root] { Error: [mapper_parsing_exception] No handler for type [flattened] declared on field [state]
+```
+- 위 3을 확인 하면 나오는 Elasticsearch의 설정을 보면,
+"build_flavor" : "oss" 이기 때문에  Kibana도 oss 버전을 사용해야함!
+ 
 
 -------
 # Logstash 설치
