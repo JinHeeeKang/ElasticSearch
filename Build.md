@@ -3,6 +3,6 @@
 
 ## 1. JAVA 설치
 
-- Java 8 JDK 파일 설치 구글링 해서 나온 블로그의 url을 통해 다운로드
-- http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+- Java 8 JDK 파일 설치 구글링 해서 나온 블로그의 url을 통해 다운로드 함
+- http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  
 출처: https://blog.acu.pe.kr/56 [아쿠 :: 컴공의 기록]
