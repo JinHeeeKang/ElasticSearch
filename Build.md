@@ -31,7 +31,7 @@ brew install elasticsearch
 ```
 
 ### 3. elasticsearch 실행
-- 
+- 실행
 ```
 elasticsearch
 ```
