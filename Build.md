@@ -110,7 +110,9 @@ http://localhost:5601
 ```
 
 -------
+
 # Logstash 설치
+
 ```
 brew install logstash
 ```
