@@ -100,7 +100,7 @@ brew remove kibana-full
 brew install kibana
 ```
 
-## 3. kibana 실행
+## 2. kibana 실행
 - 엘라스틱서치 실행 후, 다른 터미널을 열어 키바나 실행 
 - 터미널에서 아래 코드로 실행
 ```
@@ -120,7 +120,6 @@ http://localhost:5601
 brew install logstash
 ```
 ## 2. Logstash 실행
-```
 ```
 brew services start logstash
 ```
