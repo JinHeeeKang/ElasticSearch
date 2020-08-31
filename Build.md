@@ -1,6 +1,8 @@
 # mac 에서 Elastic Search, Kibana, Logstash 환경 구축
 - 맥에서 환경 구축하는 건 처음이라 구글링하며 설치 해보았습니다.
 
+# Elastic Search 설치
+
 ## 1. JAVA 설치
 
 - Java 8 JDK 파일 설치 구글링 해서 나온 블로그의 url을 통해 다운로드
@@ -98,7 +100,7 @@ brew remove kibana-full
 brew install kibana
 ```
 
-## 3 kibana 실행
+## 3. kibana 실행
 - 엘라스틱서치 실행 후, 다른 터미널을 열어 키바나 실행 
 - 터미널에서 아래 코드로 실행
 ```
@@ -113,6 +115,7 @@ http://localhost:5601
 
 # Logstash 설치
 
+## 1. Logstash 설치
 ```
 brew install logstash
 ```
