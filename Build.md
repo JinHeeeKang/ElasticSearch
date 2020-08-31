@@ -119,3 +119,8 @@ http://localhost:5601
 ```
 brew install logstash
 ```
+## 2. Logstash 실행
+```
+```
+brew services start logstash
+```
