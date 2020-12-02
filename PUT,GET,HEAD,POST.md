@@ -33,7 +33,7 @@ PUT my_index/_doc/1
 ```
 
 
-```GET my_index/_source/1``` : doc 내용만
+- ```GET my_index/_source/1``` : doc 내용만
   - 결과    
 ```    
 {
