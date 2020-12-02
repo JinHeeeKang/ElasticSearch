@@ -118,12 +118,45 @@ PUT my_index/_doc/1
     
     
 # 4. POST
-- id없이 insert       
+- id없이 insert, 자동으로 id 생성됨       
 ```
 POST my_index/_doc/    
 {
   "message":"안녕하세요 엘라스틱" 
 }
 ```
+
+- "doc_as_upsert" : true 없는 데이터라면 새로 만들어주는 옵션
+```
+POST /catalog/_update/6
+{
+  "doc": {
+    "sku":"sp0000002",
+    "title":"elastic for bigdata",
+    "desciption":"elastic for bigdata",
+    "author":"kang jin hee",
+    "ISBN":"1231241232",
+    "price":300000,
+     "email": "wlsgml9975@naver.com"   
+  },
+  "doc_as_upsert" : true
+}
+```
+ 
+- 수식으로도 업데이터 가능
+  - lang(랭귀지) paineless: js의 한 종류
+```
+POST catalog/_update/1
+{
+ "script": {
+   "source": "ctx._source.price += params.price",
+   "lang":"painless",
+   "params": {
+     "price":20000
+   }
+ } 
+}
+```
+
  
 
