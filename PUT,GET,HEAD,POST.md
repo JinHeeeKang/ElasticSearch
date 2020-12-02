@@ -16,7 +16,6 @@ PUT my_index/_doc/1
 
 - id를 아는 특정 데이터를 확일할 때
 ```GET my_index/_doc/1``` : 입력받은 my_index/_doc/1 의 정보가 출력 됨
-
   - 결과 
 ```
 {
